@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+
+h6 {
+  color: #d8d8d8;
+}
+
+hr {
+  width: 30px;
+  height: 2px;
+  background-color: #fb774b;
+}
+/* navbar */
+nav .container .collapse ul li i {
+  cursor: pointer;
+  color: #1d1d1d;
+}
+.navbar-toggler {
+  border: none;
+  outline: none !important;
+}
+.navbar-nav a {
+  padding: 0 0.5em;
+  color: #1d1d1d;
+  transition: 0.3s ease;
+}
+.navbar-nav a:hover,
+.navbar-nav a:active,
+nav .container .collapse ul li i:hover {
+  color: #fb774b;
+}
+#bar {
+  color: black;
+  transition: 0.3s ease;
+}
+#bar:hover {
+  color: #fb774b;
+}
+#navbarSupportedContent > ul {
+  margin: 1em;
+}
+#navbarSupportedContent > ul li {
+  margin: 0.3em 0;
+}
+/* Home */
+#home {
+  background-image: url(../imgs/back.jpg);
+  background-size: cover;
+  background-position: top 4.5em center;
+  height: 100vh;
+  width: 100%;
+}
+#home span {
+  color: #fb774b;
+}
+.button {
+  font-weight: 700;
+  color: aliceblue;
+  background-color: #1d1d1d;
+  padding: 0.5em 1em;
+  box-shadow: 0.2em 0.2em rgb(61, 61, 61);
+  transition: 0.3s ease;
+}
+button:hover {
+  box-shadow: none;
+}
+/* New Collecttion */
+#new .row > div {
+  position: relative;
+}
+#new .row > div::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #3f3f3f;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+#new .row > div:hover::after {
+  opacity: 0.5;
+}
+#new .row > div img {
+  height: 100%;
+  width: 100%;
+}
+#new .row > div .details {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.5em;
+}
+#new .row > div:first-child .details {
+  padding-left: 1em;
+  align-items: start;
+}
+#new .row > div:nth-child(2) .details {
+  align-items: center;
+}
+#new .row > div:last-child .details {
+  align-items: end;
+  padding-right: 1em;
+}
+@media screen and (max-width: 992px) {
+  #new .row > div .details {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #new .row > div:first-child .details,
+  #new .row > div:last-child .details {
+    padding-left: 0em;
+    align-items: center;
+  }
+}

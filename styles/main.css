@@ -44,6 +44,10 @@ nav .container .collapse ul li i {
   cursor: pointer;
   color: #1d1d1d;
 }
+.active {
+  color: #fb774b !important;
+  font-weight: 500;
+}
 .navbar {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -269,4 +273,10 @@ select {
 }
 .size button {
   background-color: #fb774b;
+}
+.pagination li a {
+  color: #fb774b;
+}
+.pagination li a:hover {
+  color: #c15d3b;
 }

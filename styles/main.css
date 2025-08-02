@@ -393,3 +393,56 @@ select {
   margin-right: 0.5em;
   background-color: #fb774b;
 }
+/* about */
+#about .box div {
+  color: white;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  transition: 1s ease;
+  position: relative;
+  padding: 1em 0;
+  background-color: #fb774b;
+  border-radius: 0.5em;
+}
+#about .box div::after {
+  position: absolute;
+  content: " Hover Here";
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  transition: 1s ease;
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#about .box div:hover::after {
+  content: "";
+  height: 100%;
+}
+#about .box div:hover {
+  background-color: transparent;
+}
+#about .box div:hover p,
+#about .box div:hover h5 {
+  opacity: 1;
+  visibility: visible;
+  color: black;
+}
+#about .box div:hover i {
+  color: #fb774b;
+}
+#about .box div i {
+  color: transparent;
+  z-index: 3;
+  transition: 1s ease;
+}
+#about .box div p,
+#about .box div h5 {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s ease;
+  z-index: 3;
+}

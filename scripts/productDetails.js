@@ -68,7 +68,8 @@ if (product) {
     });
 
     setTimeout(() => {
-      console.log("Current path:", window.location.pathname);
+      console.log("Redirecting in 2s...");
+
       window.location.href = "cart.html";
     }, 2000);
   });

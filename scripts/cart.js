@@ -34,9 +34,14 @@ function renderCart() {
           <td><i class="fa-solid fa-trash-can trash" data-id="${
             cartItem.id
           }" style="cursor:pointer;"></i></td>
-          <td><img src="${cartItem.image}" alt="${
-        cartItem.name
-      }" class="p-2"/></td>
+          <td>
+          <img 
+          src="${cartItem.image}"
+          data-id="${cartItem.id}"
+          alt="${cartItem.name}"
+          style="cursor:pointer;"
+          class="p-2 img"/>
+          </td>
           <td><h5>${cartItem.name}</h5></td>
             <td><h5>${cartItem.size}</h5></td>
           <td><h5>$${cartItem.price}</h5></td>
@@ -98,6 +103,13 @@ function renderCart() {
     renderCart();
     renderCartIcon();
   });
+  document.querySelectorAll(".img").forEach((img) => {
+    const id = Number(img.getAttribute("data-id"));
+    img.addEventListener("click", () => {
+      window.location.href = `ProductDetails.html?id=${id}`;
+    });
+  });
+
   document.getElementById("checkout").addEventListener("click", () => {
     notify("Proceeding to checkout...");
 

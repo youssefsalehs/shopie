@@ -19,6 +19,7 @@ function renderCart() {
             <td>Remove</td>
             <td>Image</td>
             <td>Product</td>
+            <td>Size</td>
             <td>Price</td>
             <td>Quantity</td>
             <td>Total</td>
@@ -37,6 +38,7 @@ function renderCart() {
         cartItem.name
       }" class="p-2"/></td>
           <td><h5>${cartItem.name}</h5></td>
+            <td><h5>${cartItem.size}</h5></td>
           <td><h5>$${cartItem.price}</h5></td>
           <td>
             <input

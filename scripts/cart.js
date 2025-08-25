@@ -33,9 +33,7 @@ function renderCart() {
         <tr>
           <td><i class="fa-solid fa-trash-can trash" data-id="${
             cartItem.id
-          }" data-size="${
-        cartItem.size === null ? "-" : cartItem.size
-      }" style="cursor:pointer;"></i></td>
+          }" data-size="${cartItem.size}" style="cursor:pointer;"></i></td>
           <td>
           <img 
           src="${cartItem.image}"
@@ -45,7 +43,7 @@ function renderCart() {
           class="p-2 img"/>
           </td>
           <td><h5>${cartItem.name}</h5></td>
-            <td><h5>${cartItem.size}</h5></td>
+            <td><h5>${cartItem.size || "-"}</h5></td>
           <td><h5>$${cartItem.price}</h5></td>
           <td>
             <input

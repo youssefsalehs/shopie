@@ -50,7 +50,10 @@
             </li>
             <li class="nav-item p-sm-2">
               <a href="cart.html"
-                ><i class="fa-solid fa-cart-shopping nav-link active"></i
+                ><i
+                  class="fa-solid fa-cart-shopping nav-link active position-relative"
+                  id="cart-icon"
+                ></i
               ></a>
             </li>
           </ul>
@@ -97,81 +100,44 @@
                 <h5>$130</h5>
               </td>
             </tr>
-            <tr>
-              <td><i class="fa-solid fa-trash-can"></i></td>
-              <td><img src="imgs/shoes/3.jpg" alt="" /></td>
-              <td>
-                <h5>UrbanStride Shoes</h5>
-              </td>
-              <td>
-                <h5>$65</h5>
-              </td>
-              <td>
-                <input
-                  type="number"
-                  class="pl-1 w-25"
-                  value="1"
-                  min="1"
-                  id=""
-                />
-              </td>
-              <td>
-                <h5>$130</h5>
-              </td>
-            </tr>
-            <tr>
-              <td><i class="fa-solid fa-trash-can"></i></td>
-              <td><img src="imgs/shoes/4.jpg" alt="" /></td>
-              <td>
-                <h5>EcoSole Shoes</h5>
-              </td>
-              <td>
-                <h5>$65</h5>
-              </td>
-              <td>
-                <input
-                  type="number"
-                  class="pl-1 w-25"
-                  value="1"
-                  min="1"
-                  id=""
-                />
-              </td>
-              <td>
-                <h5>$130</h5>
-              </td>
-            </tr>
           </tbody>
         </table>
       </section>
       <section id="cart-bottom">
         <div class="row">
-          <div class="cupon col-lg-6 col-md-6 col-12">
+          <div class="total col-lg-6 col-md-6 col-12 mb-3">
+            <div class="d-flex flex-column">
+              <h5>Cart Total</h5>
+              <div class="d-flex justify-content-between pt-3">
+                <h6>Subtotal</h6>
+                <p id="subtotal">$215</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <h6>Shipping</h6>
+                <p id="shipping">$255</p>
+              </div>
+              <hr class="total-hr" />
+              <div class="d-flex justify-content-between">
+                <h6>total</h6>
+                <p id="total">$255</p>
+              </div>
+              <button class="button mb-3" id="checkout">
+                PROCEED TO CHECKOUT
+              </button>
+            </div>
+          </div>
+          <div
+            class="cupon col-lg-6 col-md-6 col-12 d-flex flex-column justify-content-between gap-3"
+          >
             <div>
               <h5>Coupon</h5>
               <p class="pt-3 mb-2">Enter Your Coupon</p>
               <input type="text" placeholder="Coupon Code" />
               <button class="button mb-3">APPLY</button>
             </div>
-          </div>
-          <div class="total col-lg-6 col-md-6 col-12">
-            <div class="d-flex flex-column">
-              <h5>Cart Total</h5>
-              <div class="d-flex justify-content-between pt-3">
-                <h6>Subtotal</h6>
-                <p>$215</p>
-              </div>
-              <div class="d-flex justify-content-between">
-                <h6>Shipping</h6>
-                <p>$255</p>
-              </div>
-              <hr class="total-hr" />
-              <div class="d-flex justify-content-between">
-                <h6>Shipping</h6>
-                <p>$255</p>
-              </div>
-              <button class="button mb-3">PROCEED TO CHECKOUT</button>
-            </div>
+            <button class="button align-self-start mb-3" id="clear">
+              Clear All Cart
+            </button>
           </div>
         </div>
       </section>
@@ -272,5 +238,7 @@
     </footer>
     <!-- Footer -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script type="module" src="scripts/cart.js"></script>
+    <script type="module" src="scripts/general.js"></script>
   </body>
 </html>

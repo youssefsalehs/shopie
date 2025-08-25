@@ -22,6 +22,7 @@
         <a class="navbar-brand d-flex align-items-center" href="index.html">
           <span class="fw-bold fs-3 ms-1">shopie</span></a
         >
+
         <button
           class="navbar-toggler"
           type="button"
@@ -50,7 +51,10 @@
             </li>
             <li class="nav-item p-sm-2">
               <a href="cart.html"
-                ><i class="fa-solid fa-cart-shopping nav-link"></i
+                ><i
+                  class="fa-solid fa-cart-shopping nav-link position-relative"
+                  id="cart-icon"
+                ></i
               ></a>
             </li>
           </ul>
@@ -59,7 +63,7 @@
     </nav>
     <!-- Navbar -->
     <!-- Product -->
-    <section class="container sproduct my-5 pt-5">
+    <section class="container product my-5 pt-5" id="productDetailsContainer">
       <div class="row mt-5">
         <div class="col-lg-5 col-md-12 col-12">
           <img
@@ -68,44 +72,21 @@
             class="img-fluid w-100"
             id="main_img"
           />
-          <div class="row mt-4">
-            <img
-              src="imgs/shop/24.jpg"
-              alt=""
-              class="img-fluid col-3 small_img"
-            />
-            <img
-              src="imgs/shop/25.jpg"
-              alt=""
-              class="img-fluid col-3 small_img"
-            />
-            <img
-              src="imgs/shop/26.jpg"
-              alt=""
-              class="img-fluid col-3 small_img"
-            />
-            <img
-              src="imgs/shop/1.jpg"
-              alt=""
-              class="img-fluid col-3 small_img"
-            />
-          </div>
         </div>
         <div class="col-lg-5 col-md-12 col-12">
-          <h6 class="mb-3">Home / T-shirt</h6>
-          <h3 class="mb-5">Men's Fashion T-shirt</h3>
-          <h2 class="mb-3">$130.00</h2>
-          <select class="my-3">
-            <option>select size</option>
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
-            <option value="xlarge">xl</option>
-            <option value="xxlarge">xxl</option>
+          <h6 class="mb-2">Home / t-shirt</h6>
+          <h3 class="mb-3">t-shirt</h3>
+          <h2 class="mb-2">$40</h2>
+          <select class="my-2">
+            <option>Select size</option>
+            <option value="small">s</option>
+            <option value="medium">m</option>
+            <option value="large">l</option>
           </select>
-          <div class="mb-5 size d-flex gap-2">
+
+          <div class="mb-2 size d-flex gap-2">
             <input type="number" name="" id="" />
-            <button class="button">Add To Cart</button>
+            <button class="button" id="addbtn">Add To Cart</button>
           </div>
           <div class="pt-5">
             <h4 class="mb-5">Product Details</h4>
@@ -135,7 +116,7 @@
           Here you can check out our new products with fair prices on shopie.
         </p>
       </div>
-      <div class="row mx-auto container-fluid">
+      <div class="row mx-auto container-fluid" id="featuredContainer">
         <div class="product text-center col-lg-3 col-md-6 col-sm-12">
           <img src="imgs/featured/1.jpg" alt="" class="img-fluid" />
           <div class="star mt-3">
@@ -295,14 +276,7 @@
     <!-- Footer -->
     <!-- Bootstrap JS File -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
-    <script>
-      let main_img = document.getElementById("main_img");
-      let small_imgs = document.getElementsByClassName("small_img");
-      Array.from(small_imgs).forEach((img) => {
-        img.addEventListener("click", function () {
-          main_img.src = img.src;
-        });
-      });
-    </script>
+    <script type="module" src="scripts/productDetails.js"></script>
+    <script type="module" src="scripts/general.js"></script>
   </body>
 </html>

@@ -68,6 +68,7 @@ if (product) {
     });
 
     setTimeout(() => {
+      console.log("Current path:", window.location.pathname);
       window.location.href = "cart.html";
     }, 2000);
   });

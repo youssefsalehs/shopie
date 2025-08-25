@@ -70,7 +70,7 @@ if (product) {
     setTimeout(() => {
       console.log("Redirecting in 2s...");
 
-      window.location.href = "/cart.html";
+      window.location.href = "/shopie/cart.html";
     }, 2000);
   });
 }

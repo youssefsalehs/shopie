@@ -13,7 +13,7 @@ export const items = [
     The mid-weight fabric (180 GSM) strikes the ideal balance between lightweight and durable,
     ensuring it retains its shape wash after wash.`,
     mainImage: "imgs/shop/1.jpg",
-    sizes: ["small", "medium", "large", "xlarge", "xxlarge"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
   },
   {
     id: 2,

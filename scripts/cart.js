@@ -33,7 +33,7 @@ function renderCart() {
         <tr>
           <td><i class="fa-solid fa-trash-can trash" data-id="${
             cartItem.id
-          }" style="cursor:pointer;"></i></td>
+          }" data-size="${cartItem.size}" style="cursor:pointer;"></i></td>
           <td>
           <img 
           src="${cartItem.image}"
@@ -50,11 +50,11 @@ function renderCart() {
               type="number"
               class="pl-1 w-25 quantity"
               data-id="${cartItem.id}"
-              value="${cartItem.quantity || 1}"
+              value="${cartItem.quantity}"
               min="1"
             />
           </td>
-          <td><h5>$${cartItem.price * (cartItem.quantity || 1)}</h5></td>
+          <td><h5>$${cartItem.price * cartItem.quantity}</h5></td>
         </tr>
       `;
     });
@@ -65,7 +65,8 @@ function renderCart() {
     trashIcons.forEach((icon) => {
       icon.addEventListener("click", () => {
         const id = Number(icon.getAttribute("data-id"));
-        removeItem(id);
+        const size = icon.getAttribute("data-size");
+        removeItem(id, size);
         renderCart();
         renderCartIcon();
       });
@@ -77,9 +78,7 @@ function renderCart() {
         let cartItems = getCartItems();
 
         cartItems = cartItems.map((item) =>
-          item.id === id
-            ? { ...item, quantity: parseInt(input.value) || 1 }
-            : item
+          item.id === id ? { ...item, quantity: parseInt(input.value) } : item
         );
 
         setCartItems(cartItems);

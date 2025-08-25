@@ -27,7 +27,7 @@ if (product) {
     <select class="my-2">
   <option>Select size</option>
   ${product.sizes
-    .map((size) => `<option value="${size.toLowerCase()}">${size}</option>`)
+    .map((size) => `<option value="${size}">${size}</option>`)
     .join("")}
 </select>
 

@@ -36,7 +36,7 @@ h1 {
   color: #fb774b;
   padding: 0.5em 0.8em;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.548);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   font-family: sans-serif;
   font-size: 1.2em;
   z-index: 9999;

@@ -68,7 +68,7 @@ if (product) {
     });
 
     setTimeout(() => {
-      window.location.href = "./cart.html";
+      window.location.href = "../cart.html";
     }, 2000);
   });
 }

@@ -23,6 +23,7 @@ export function addItem(newItem) {
 }
 
 export function removeItem(id, size = null) {
+  if (size === "null") size = null;
   id = Number(id);
   let cartItems = getCartItems();
 
